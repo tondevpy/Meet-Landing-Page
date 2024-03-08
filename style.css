@@ -1,0 +1,230 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+  overflow-x: hidden;
+  background: #FAFAFA;
+}
+.logo {
+  display: flex;
+  justify-content: center;
+}
+.logo img {
+  margin-top: 61px;
+  margin-bottom: 61px;
+}
+.content {
+  display: flex;
+  gap: 80px;
+  height: 358px;
+  align-items: center;
+}
+.content img {
+  width: 300px;
+  object-fit: contain;
+}
+.content-btn {
+  width: 540px;
+  text-align: center;
+}
+.content-btn h1 {
+  color: #28283D;
+  font-size: 54px;
+}
+.content-btn p {
+  font-size: 18px;
+  color: #87879D;
+  margin-top: 34px;
+}
+.buttons {
+  margin-top: 34px;
+}
+button {
+  border: none;
+  padding: 20px;
+  border-radius: 29px;
+  color: #fff;
+  cursor: pointer;
+}
+.btn1{
+  background: #4D96A9;
+}
+.btn1 span {
+  color: #8FE3F9;
+}
+.btn2{
+  background: #855FB1;
+}
+main {
+  margin-top: 110px;
+}
+.s01 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.line {
+  border-right: 0.5px solid #87879D; /* Adiciona uma borda direita */
+  height: 100px; /* Altura da linha */
+  margin-right: 5px; /* Espaço entre a linha e o número */
+}
+.number {
+  display: flex;
+  justify-content: center;
+  margin-right: 5px;
+}
+.number span {
+  border: 1px solid #87879D;
+  border-radius: 50%;
+  padding: 2px;
+  font-size: 16px;
+  color: #87879D;
+}
+.photos {
+  margin-top: 64px;
+  margin-bottom: 80px;
+  height: 248px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px;
+}
+.photos img {
+  width: 100%;
+  border-radius: 10px;
+}
+.s02 {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.s02 h1 {
+  font-size: 16px;
+  color: #4D96A9;
+}
+.s02 h2 {
+  font-size: 40px;
+  color: #28283D;
+  margin-bottom: 32px;
+  margin-top: 16px;
+}
+.s02 p {
+  font-size: 18px;
+  color: #87879D;
+  margin-top: 32px;
+}
+.s02-line {
+  position: absolute;
+  top: -200px;
+}
+footer {
+  margin-top: 100px;
+  position: relative;
+}
+.footer-content {
+  position: relative; /* Adiciona posição relativa para que os elementos filhos possam ser posicionados relativamente a este */
+  background: #4D96A9 url('./assets/desktop/image-footer.jpg');
+}
+
+.footer-content::after {
+  content: ''; /* Adiciona conteúdo ao seletor */
+  position: absolute; /* Posiciona o pseudo-elemento de forma absoluta dentro do seu elemento pai */
+  top: 0; /* Define a posição do topo */
+  right: 0; /* Define a posição da direita */
+  bottom: 0; /* Define a posição do fundo */
+  left: 0; /* Define a posição da esquerda */
+  background-color: #4D96A990; /* Adiciona a cor de sobreposição (preto com 50% de transparência) */
+}
+.footer-content-text {
+  position: relative; /* Adiciona posição relativa para que possamos posicionar o conteúdo em relação a este elemento */
+  z-index: 2; /* Garante que o conteúdo esteja em cima do pseudo-elemento */
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  height: 308px;
+  align-items: center;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+.footer-content-text button {
+  background: #855FB1;
+  color: #fff;
+  font-weight: bold;
+  z-index: 2; /* Garante que o botão esteja em cima do pseudo-elemento */
+}
+
+.footer-content-text button span {
+  color: #979797;
+}
+
+.footer-content::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #4D96A990;
+  z-index: 1; /* Garante que o pseudo-elemento fique atrás do conteúdo */
+}
+footer h1 {
+  color: #fff;
+  font-size: 40px;
+}
+footer p {
+  color: #fff;
+  font-size: 18px;
+}
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+    justify-content: center;
+    height: auto;
+    text-align: center;
+  }
+
+  .content img {
+    width: 200px;
+    margin-bottom: 20px;
+  }
+
+  .content-btn {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .footer-content-text {
+    flex-direction: column;
+    margin: 0 20px;
+    height: auto;
+    text-align: center;
+  }
+
+  .footer-content-text button {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo img {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .content-btn h1 {
+    font-size: 32px;
+  }
+
+  .content-btn p {
+    font-size: 16px;
+  }
+
+  .footer-content-text {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
